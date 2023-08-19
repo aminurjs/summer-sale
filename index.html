@@ -6,15 +6,120 @@
     <title>Small Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .font-work{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
 </head>
-<body>
+<body class="font-work">
     <section class="py-20 bg-yellow-50">
-        <div class="container flex items-center">
-            <div class="">
-                <h3 class="">---SALE FEVER---</h3>
+        <div class="container mx-auto flex items-center justify-center gap-8 px-5">
+            <div class="text-center text-[#111] ">
+                <h3 class="text-3xl font-medium mb-10">---SALE FEVER---</h3>
+                <h3 class="text-6xl font-bold max-w-3xl mb-16">Purchase TK 200 or above & get <span class="text-[#E527B2]">20% off</span></h3>
+                <p class="text-2xl font-medium">Use Promo Code<button class="btn btn-secondary ml-5 text-white font-semibold text-2xl">SELL200</button></p>
             </div>
             <div class="">
                 <img src="./images/Summer 1.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="py-28 bg-[#f8f8f8]">
+        <div class="max-w-[1440px] mx-auto px-5">
+            <div class="flex gap-6">
+                <div class="text-[#111] w-3/4">
+                    <div class="mb-14">
+                        <h1 class="text-4xl font-bold mb-8">Kitchenware</h1>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card w-full bg-base-100 shadow-sm">
+                                <figure class="m-5 bg-[#1111110c]">
+                                  <img src="./images/prod1.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <img src="./images/3star.png" alt="">
+                                  <h2 class="card-title">Spoons</h2>
+                                  <p><span id="prod1-price">39.00</span> TK</p>
+                                </div>
+                            </div>
+                            <div class="card w-full bg-base-100 shadow-sm">
+                                <figure class="m-5 bg-[#1111110c]">
+                                  <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <img src="./images/0star.png" alt="">
+                                  <h2 class="card-title">K. Accessories</h2>
+                                  <p><span id="prod1-price">25.00</span> TK</p>
+                                </div>
+                            </div>
+                            <div class="card w-full bg-base-100 shadow-sm">
+                                <figure class="m-5 bg-[#1111110c]">
+                                  <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <img src="./images/4star.png" alt="">
+                                  <h2 class="card-title">Home Cooker</h2>
+                                  <p><span id="prod1-price">49.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-14">
+                        <h1 class="text-4xl font-bold mb-8">Sportswear</h1>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="card w-full bg-base-100 shadow-sm">
+                                <figure class="m-5 bg-[#1111110c]">
+                                  <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <img src="./images/2star.png" alt="">
+                                  <h2 class="card-title">Spoons</h2>
+                                  <p><span id="prod1-price">39.00</span> TK</p>
+                                </div>
+                            </div>
+                            <div class="card w-full bg-base-100 shadow-sm">
+                                <figure class="m-5 bg-[#1111110c]">
+                                  <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <img src="./images/0star.png" alt="">
+                                  <h2 class="card-title">K. Accessories</h2>
+                                  <p><span id="prod1-price">25.00</span> TK</p>
+                                </div>
+                            </div>
+                            <div class="card w-full bg-base-100 shadow-sm">
+                                <figure class="m-5 bg-[#1111110c]">
+                                  <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <img src="./images/4star.png" alt="">
+                                  <h2 class="card-title">Home Cooker</h2>
+                                  <p><span id="prod1-price">49.00</span> TK</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-[#111] w-1/4 mt-20">
+                    <div class="bg-white p-5 mb-6 rounded-xl">
+                        <h2 class="text-2xl font-medium mb-5">Have coupon?</h2>
+                        <input class="py-2 px-3 w-2/3 text-lg placeholder:text-gray-400 border border-gray-200 rounded-l-lg rounded-r-none outline-none" id="coupon-box" type="text" placeholder="Coupon code"><button class="btn btn-secondary rounded-r-lg rounded-l-none py-2 w-1/3 text-lg" disabled>Apply</button>
+                    </div>
+                    <div class="bg-white p-5">
+                        <div class="border-b border-gray-200 mb-5">
+
+                        </div>
+                        <div class="mt-5">
+                            <h2 class="text-xl font-medium mb-5">Total price : <span class="font-normal text-gray-500"><span id="total-price">00.00</span> TK</span></h2>
+                            <h2 class="text-xl font-medium mb-5">Discount : <span class="font-normal text-gray-500"><span id="discount">00.00</span> TK</span></h2>
+                            <h2 class="text-xl font-medium pb-5 border-b border-gray-200 mb-4">Price : <span class="font-normal text-gray-500"><span id="dis-price">00.00</span> TK</span></h2>
+                            <button class="btn btn-secondary w-4/5 text-lg">Make Purchase</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
