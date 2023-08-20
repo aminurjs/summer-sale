@@ -152,7 +152,18 @@
                             <h2 class="text-xl font-medium mb-5">Total price : <span class="font-normal text-gray-500"><span id="total-price">00.00</span> TK</span></h2>
                             <h2 class="text-xl font-medium mb-5">Discount : <span class="font-normal text-gray-500"><span id="discount">00.00</span> TK</span></h2>
                             <h2 class="text-xl font-medium pb-5 border-b border-gray-200 mb-4">Price : <span class="font-normal text-gray-500"><span id="dis-price">00.00</span> TK</span></h2>
-                            <button id="purchase" class="btn btn-secondary w-full text-lg" disabled>Make Purchase</button>
+                            <button id="purchase" class="btn btn-secondary w-full text-lg" onclick="window.location.href = '#purchased'" disabled>Make Purchase</button>
+                            <!-- Put this part before tag -->
+                            <div class="modal" id="purchased">
+                              <div class="modal-box p-20 text-center">
+                                <img class="inline" src="./images/congo.png" alt="">
+                                <h3 class="font-bold text-5xl mt-8">Congratulations!</h3>
+                                <p class="py-4">Your Purchase the product</p>
+                                <div>
+                                  <a href="./index.html" class="btn btn-secondary px-11">Go Home</a>
+                                </div>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
