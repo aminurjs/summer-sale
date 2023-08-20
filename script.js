@@ -1,87 +1,33 @@
-
-// Card clicked function
-
+// All cards click event function here
 document.getElementById('card1').addEventListener('click', function(){
-    const productPrice = getInput('prod1-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod1-title');
-}
-)
+    cardClick('prod1-price', 'prod1-title');
+})
 document.getElementById('card2').addEventListener('click', function(){
-    const productPrice = getInput('prod2-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod2-title');
-}
-)
+    cardClick('prod2-price', 'prod2-title');
+})
 document.getElementById('card3').addEventListener('click', function(){
-    const productPrice = getInput('prod3-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod3-title');
-}
-)
+    cardClick('prod3-price', 'prod3-title');
+})
 document.getElementById('card4').addEventListener('click', function(){
-    const productPrice = getInput('prod4-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod4-title');
-}
-)
+    cardClick('prod4-price', 'prod4-title');
+})
 document.getElementById('card5').addEventListener('click', function(){
-    const productPrice = getInput('prod5-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod5-title');
-}
-)
+    cardClick('prod5-price', 'prod5-title');
+})
 document.getElementById('card6').addEventListener('click', function(){
-    const productPrice = getInput('prod6-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod6-title');
-}
-)
+    cardClick('prod6-price', 'prod6-title');
+})
 document.getElementById('card7').addEventListener('click', function(){
-    const productPrice = getInput('prod7-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod7-title');
-}
-)
+    cardClick('prod7-price', 'prod7-title');
+})
 document.getElementById('card8').addEventListener('click', function(){
-    const productPrice = getInput('prod8-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod8-title');
-}
-)
+    cardClick('prod8-price', 'prod8-title');
+})
 document.getElementById('card9').addEventListener('click', function(){
-    const productPrice = getInput('prod9-price');
-    const totalPrice = getInput('total-price');
-    const totalP = productPrice + totalPrice;
-    const total = totalP.toFixed(2);
-    setText('total-price', total);
-    addToCart('prod9-title');
-}
-)
+    cardClick('prod9-price', 'prod9-title');
+})
+
+// Discount / Coupon Button's function And get coupon code on the input field
 document.getElementById('coupon-btn').addEventListener('click', function(){
     const totalPrice = getInput('total-price');
     const couponBox = document.getElementById('coupon-box');
@@ -103,14 +49,27 @@ document.getElementById('coupon-btn').addEventListener('click', function(){
     }
 }
 )
-
-
+// Card clicked function
+function cardClick(prodPrice, productTitle){
+    const productPrice = getInput(prodPrice);
+    const totalPrice = getInput('total-price');
+    const totalP = productPrice + totalPrice;
+    const total = totalP.toFixed(2);
+    setText('total-price', total);
+    const disTotalPrice = getInput('dis-price');
+    const disTotalP = productPrice + disTotalPrice;
+    const disTotal = disTotalP.toFixed(2);
+    setText('dis-price', disTotal);
+    addToCart(productTitle);
+}
+// Get input from a Html element
 function getInput(id){
     const inputBox = document.getElementById(id);
     const inputText = inputBox.innerText;
     const input = parseFloat(inputText);
     return input;
 }
+// Set a value to inner html & Enable Purchased button whet total price more than 0
 function setText(id, total){
     const text= document.getElementById(id);
     text.innerText = total;
@@ -129,15 +88,15 @@ function setText(id, total){
         couponBtn.setAttribute('disabled', true);
     }
 }
+// Set product in the cart function
 function addToCart(title){
     const element = document.getElementById(title);
     const elementText = element.innerText;
     const place = document.getElementById('cart-element');
     const count = place.childElementCount;
     const p = document.createElement('p');
-    p.innerHTML = `<span class="text-xl font-medium mb-3 block">${count + 1} ${elementText}</span>`;
+    p.innerHTML = `<span class="text-xl font-medium mb-3 block">${count + 1}. ${elementText}</span>`;
     place.appendChild(p);
 }
 
-// Make purchase Button conditio
    
