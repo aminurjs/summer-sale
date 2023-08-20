@@ -98,5 +98,3 @@ function addToCart(title){
     p.innerHTML = `<span class="text-xl font-medium mb-3 block">${count + 1}. ${elementText}</span>`;
     place.appendChild(p);
 }
-
-   
